@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- signalsystem -->
+    <style>
+      .box {
+        height: 200px;
+        width: 200px;
+        border: 3px solid black;
+        border-radius: 50%;
+      }
+
+      .off {
+        background-color: aliceblue;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+    </style>
+
+    <!-- signalsystem end -->
+  </head>
+  <body>
+    <!-- signalsystem start -->
+
+    <div id="div" class="box off"></div>
+    <br /><br />
+    <ul id="list"></ul>
+    <br /><br />
+
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <button id="yellow">yellow</button>
+
+    <!-- signalsystem end -->
+
+    <script>
+      //signal system...........................
+
+      $("#red").click(() => {
+        $("#div").attr("class", "box red");
+        $("#list").empty();
+        $("#list").append("<p>stop now</p>");
+      });
+
+      $("#green").click(() => {
+        $("#div").attr("class", "box green");
+        $("#list").empty();
+        $("#list").append("<p>start journey</p>");
+      });
+
+      $("#yellow").click(() => {
+        $("#div").attr("class", "box yellow");
+        $("#list").empty();
+        $("#list").append("<p>go slow</p>");
+      });
+      //signsl system end....................................
+    </script>
+  </body>
+</html>
